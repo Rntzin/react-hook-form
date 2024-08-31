@@ -1,95 +1,136 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import {
+  Box,
+  Button,
+  Flex,
+  FormControl,
+  FormLabel,
+  Heading,
+  Input,
+  Text,
+  Textarea,
+} from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+    <Flex
+      minHeight="100vh"
+      width="full"
+      align="center"
+      justifyContent="center"
+      backgroundColor="gray.900"
+    >
+      <Box
+        px={12}
+        py={12}
+        width="full"
+        maxWidth="450px"
+        textAlign="center"
+        boxShadow="lg"
+        background="gray.700"
+        borderRadius="6px"
+        color="gray.200"
+      >
+        <Heading>
+          <Text fontSize="2xl">Registration Form</Text>
+        </Heading>
+        <Box>
+          <Flex justify="space-between">
+            <FormControl isRequired marginTop="15px" width="49%">
+              <FormLabel>First name</FormLabel>
+              <Input
+                type="text"
+                name="name"
+                border="none"
+                outline="none"
+                bgColor="gray.900"
+                focusBorderColor="gray.600"
+                color="gray.200"
+                placeholder="First Name"
+              />
+            </FormControl>
+            <FormControl isRequired marginTop="15px" width="49%">
+              <FormLabel>Last name</FormLabel>
+              <Input
+                type="text"
+                name="name"
+                border="none"
+                outline="none"
+                bgColor="gray.900"
+                focusBorderColor="gray.600"
+                color="gray.200"
+                placeholder="Last Name"
+              />
+            </FormControl>
+          </Flex>
+          <FormControl isRequired marginTop="15px">
+            <FormLabel>Your e-mail</FormLabel>
+            <Input
+              type="text"
+              name="name"
+              border="none"
+              outline="none"
+              bgColor="gray.900"
+              focusBorderColor="gray.600"
+              color="gray.200"
+              placeholder="Your e-mail"
             />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          </FormControl>
+          <Flex justify="space-between">
+            <FormControl isRequired marginTop="15px" width="49%">
+              <FormLabel>Your address</FormLabel>
+              <Input
+                type="text"
+                name="name"
+                border="none"
+                outline="none"
+                bgColor="gray.900"
+                focusBorderColor="gray.600"
+                color="gray.200"
+                placeholder="Your address"
+              />
+            </FormControl>
+            <FormControl isRequired marginTop="15px" width="49%">
+              <FormLabel>Your phone</FormLabel>
+              <Input
+                type="text"
+                name="name"
+                border="none"
+                outline="none"
+                bgColor="gray.900"
+                focusBorderColor="gray.600"
+                color="gray.200"
+                placeholder="Your phone"
+              />
+            </FormControl>
+          </Flex>
+          <FormControl isRequired marginTop="15px">
+            <FormLabel>Your descript message</FormLabel>
+            <Textarea
+              name="name"
+              border="none"
+              outline="none"
+              bgColor="gray.900"
+              focusBorderColor="gray.600"
+              color="gray.200"
+              resize="none"
+              placeholder="Your descript message"
+            />
+          </FormControl>
+          <Button
+            type="submit"
+            width="full"
+            bgColor="green.400"
+            mt="4px"
+            color="gray.200"
+            _hover={{
+              bgColor: "green.600",
+              color: "gray.700",
+            }}
+          >
+            Register
+          </Button>
+        </Box>
+      </Box>
+    </Flex>
   );
 }
